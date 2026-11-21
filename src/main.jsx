@@ -40,15 +40,19 @@ function Gallery() {
           </button>
         ))}
       </div>
-      <dialog ref={dialog} aria-label="Photo viewer" onKeyDown={handleKeys}
+      <dialog className="viewer" ref={dialog} aria-label="Photo viewer" onKeyDown={handleKeys}
         onClose={() => { setSelected(null); trigger.current?.focus(); }}>
-        <div className="viewer-bar">
-          <button type="button" aria-label="Close viewer" autoFocus
-            onClick={() => dialog.current.close()}><span aria-hidden="true">×</span></button>
-        </div>
         {selected && (
-          <img src={photoUrl(selected.file)} alt={selected.alt} />
+          <img className="viewer-background" src={photoUrl(selected.file, selected.thumbnail)}
+            alt="" aria-hidden="true" />
         )}
+        <div className="viewer-bar">
+          <button className="viewer-close" type="button" aria-label="Close viewer" autoFocus
+            onClick={() => dialog.current.close()} />
+        </div>
+        <div className="viewer-stage">
+          {selected && <img src={photoUrl(selected.file)} alt={selected.alt} />}
+        </div>
         {photos.length > 1 && (
           <div className="viewer-controls">
             <button type="button" aria-label="Previous photo" onClick={() => movePhoto(-1)}>

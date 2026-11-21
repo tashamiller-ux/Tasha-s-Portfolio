@@ -1,7 +1,7 @@
 export const portfolio = {
   name: "Tasha's Portfolio",
   subtitle: 'XX',
-  heading: 'Welcome to my collection',
+  heading: 'Through my lens',
   banner: 'img_2287.webp',
   photographer: '',
   email: '',
@@ -18,15 +18,8 @@ export const photos = [
   {
     "file": "img_1092.webp",
     "thumbnail": true,
-    "alt": "Bright turquoise water lies below a snow-streaked mountain range.",
-    "width": 585,
-    "height": 780
-  },
-  {
-    "file": "img_6982.webp",
-    "thumbnail": true,
-    "alt": "Low sun casts long shadows across sand dunes.",
-    "width": 585,
+    "alt": "Turquoise water stretches toward rugged mountains under textured clouds.",
+    "width": 669,
     "height": 780
   },
   {
@@ -47,20 +40,6 @@ export const photos = [
     "file": "img_0943.webp",
     "thumbnail": true,
     "alt": "Green slopes rise toward snow-streaked peaks beneath blue sky.",
-    "width": 585,
-    "height": 780
-  },
-  {
-    "file": "img_1621.webp",
-    "thumbnail": true,
-    "alt": "Low sun reflects across wet sand beside a dark headland.",
-    "width": 585,
-    "height": 780
-  },
-  {
-    "file": "aac1d63b-0b60-4424-9e2d-558218e739f1.webp",
-    "thumbnail": true,
-    "alt": "Yellow leaves cover a large tree and the ground around it.",
     "width": 585,
     "height": 780
   },
@@ -88,16 +67,16 @@ export const photos = [
   {
     "file": "img_5442.webp",
     "thumbnail": true,
-    "alt": "A small blue lake sits below a rocky mountain.",
+    "alt": "A blue lake sits below a rocky mountain and billowing white clouds.",
     "width": 585,
     "height": 780
   },
   {
     "file": "img_1904.webp",
     "thumbnail": true,
-    "alt": "A row of windows frames a faintly lit horizon in a dark room.",
-    "width": 585,
-    "height": 780
+    "alt": "Figures stand silhouetted against windows at dusk.",
+    "width": 780,
+    "height": 557
   },
   {
     "file": "img_2294.webp",
@@ -114,13 +93,6 @@ export const photos = [
     "height": 780
   },
   {
-    "file": "img_1836.webp",
-    "thumbnail": true,
-    "alt": "A covered balcony looks out over distant mountains.",
-    "width": 585,
-    "height": 780
-  },
-  {
     "file": "img_3364.webp",
     "thumbnail": true,
     "alt": "Dark rocks and low coastal plants border calm blue water.",
@@ -131,41 +103,6 @@ export const photos = [
     "file": "img_4966.webp",
     "thumbnail": true,
     "alt": "Rough stone walls frame a small window onto a distant landscape.",
-    "width": 585,
-    "height": 780
-  },
-  {
-    "file": "img_0947.webp",
-    "thumbnail": true,
-    "alt": "A turreted building stands on pilings over blue water.",
-    "width": 585,
-    "height": 780
-  },
-  {
-    "file": "img_3533.webp",
-    "thumbnail": true,
-    "alt": "Bare trees and a blue sky reflect on dark water.",
-    "width": 585,
-    "height": 780
-  },
-  {
-    "file": "img_4117.webp",
-    "thumbnail": true,
-    "alt": "A curved metal structure rises in front of a glass tower.",
-    "width": 585,
-    "height": 780
-  },
-  {
-    "file": "d64014d4-f770-4f62-ae28-34186ddcf32c.webp",
-    "thumbnail": true,
-    "alt": "Small plants line a window in a dim room.",
-    "width": 439,
-    "height": 780
-  },
-  {
-    "file": "img_2077.webp",
-    "thumbnail": true,
-    "alt": "A person sits beside tall windows overlooking a green hillside.",
     "width": 585,
     "height": 780
   },
@@ -193,9 +130,9 @@ export const photos = [
   {
     "file": "img_1905.webp",
     "thumbnail": true,
-    "alt": "Snowy mountain ranges recede beneath a pink and purple sky.",
-    "width": 585,
-    "height": 780
+    "alt": "Snow-dusted mountains recede beneath a pink and purple sky.",
+    "width": 780,
+    "height": 677
   },
   {
     "file": "img_5021.webp",
@@ -215,20 +152,6 @@ export const photos = [
     "file": "img_1021.webp",
     "thumbnail": true,
     "alt": "A narrow trail leads between steep slopes under layered clouds.",
-    "width": 585,
-    "height": 780
-  },
-  {
-    "file": "img_7008.webp",
-    "thumbnail": true,
-    "alt": "An orange dune curves beneath a clear blue sky.",
-    "width": 585,
-    "height": 780
-  },
-  {
-    "file": "img_6662.webp",
-    "thumbnail": true,
-    "alt": "A dark car interior frames the bright landscape beyond.",
     "width": 585,
     "height": 780
   },
@@ -254,51 +177,16 @@ export const photos = [
     "height": 780
   },
   {
-    "file": "img_0868.webp",
-    "thumbnail": true,
-    "alt": "A glass tower rises into a sky filled with scattered clouds.",
-    "width": 585,
-    "height": 780
-  },
-  {
-    "file": "img_1105.webp",
-    "thumbnail": true,
-    "alt": "A seated figure looks out from a rocky ledge over a turquoise lake.",
-    "width": 585,
-    "height": 780
-  },
-  {
-    "file": "img_2051.webp",
-    "thumbnail": true,
-    "alt": "Tall windows frame a hillside beneath a wood-panelled ceiling.",
-    "width": 585,
-    "height": 780
-  },
-  {
-    "file": "img_2769.webp",
-    "thumbnail": true,
-    "alt": "A road leads toward small houses and low hills under cloud.",
-    "width": 585,
-    "height": 780
-  },
-  {
-    "file": "img_0187.webp",
-    "thumbnail": true,
-    "alt": "An upward view of the Eiffel Tower shows its illuminated ironwork.",
-    "width": 585,
-    "height": 780
-  },
-  {
     "file": "img_1094.webp",
     "thumbnail": true,
-    "alt": "A low rocky ridge is partly obscured by cloud.",
-    "width": 585,
-    "height": 780
+    "alt": "A faint arc of light hangs in mist above a grassy ridge.",
+    "width": 780,
+    "height": 726
   },
   {
     "file": "img_8431.webp",
     "thumbnail": true,
-    "alt": "Tall trees frame a pale opening in the sky.",
+    "alt": "Tall evergreens frame a pale strip of sky.",
     "width": 585,
     "height": 780
   },
@@ -326,8 +214,8 @@ export const photos = [
   {
     "file": "img_7009.webp",
     "thumbnail": true,
-    "alt": "Low orange dunes meet a cloudless blue sky.",
-    "width": 585,
+    "alt": "Orange dunes rise beneath a clear blue sky.",
+    "width": 690,
     "height": 780
   },
   {
@@ -348,13 +236,6 @@ export const photos = [
     "file": "img_2121.webp",
     "thumbnail": true,
     "alt": "Pink wildflowers grow on a slope below distant mountains.",
-    "width": 585,
-    "height": 780
-  },
-  {
-    "file": "snapseed.webp",
-    "thumbnail": true,
-    "alt": "Warm evening light falls across a hilltop abbey.",
     "width": 585,
     "height": 780
   },
@@ -380,13 +261,6 @@ export const photos = [
     "height": 780
   },
   {
-    "file": "img_5781.webp",
-    "thumbnail": true,
-    "alt": "A distant skyline and bare trees reflect in still water.",
-    "width": 585,
-    "height": 780
-  },
-  {
     "file": "img_7401.webp",
     "thumbnail": true,
     "alt": "Snow blankets an open clearing below jagged peaks.",
@@ -394,37 +268,16 @@ export const photos = [
     "height": 780
   },
   {
-    "file": "img_3571.webp",
-    "thumbnail": true,
-    "alt": "A yellow taxi passes between tall city buildings.",
-    "width": 585,
-    "height": 780
-  },
-  {
     "file": "img_2356.webp",
     "thumbnail": true,
-    "alt": "Dark trunks frame a pale strip of evening sky.",
-    "width": 585,
-    "height": 780
+    "alt": "Dark tree trunks frame a brightly lit tree near the water.",
+    "width": 780,
+    "height": 697
   },
   {
     "file": "img_1548.webp",
     "thumbnail": true,
     "alt": "The lit iron lattice of the Eiffel Tower fills the frame.",
-    "width": 585,
-    "height": 780
-  },
-  {
-    "file": "img_1549.webp",
-    "thumbnail": true,
-    "alt": "The Eiffel Tower glows gold against a dark sky.",
-    "width": 585,
-    "height": 780
-  },
-  {
-    "file": "img_5850.webp",
-    "thumbnail": true,
-    "alt": "A flock of birds circles above the Arc de Triomphe.",
     "width": 585,
     "height": 780
   },
@@ -457,27 +310,6 @@ export const photos = [
     "height": 780
   },
   {
-    "file": "img_8547.webp",
-    "thumbnail": true,
-    "alt": "Sunlight flares through dense green leaves.",
-    "width": 585,
-    "height": 780
-  },
-  {
-    "file": "img_6026.webp",
-    "thumbnail": true,
-    "alt": "A small figure rests near the base of a sunlit pink wall.",
-    "width": 585,
-    "height": 780
-  },
-  {
-    "file": "img_5775.webp",
-    "thumbnail": true,
-    "alt": "Bare trees and distant buildings reflect in still blue water.",
-    "width": 585,
-    "height": 780
-  },
-  {
     "file": "img_3184.webp",
     "thumbnail": true,
     "alt": "A white lighthouse rises above low coastal vegetation.",
@@ -492,37 +324,9 @@ export const photos = [
     "height": 780
   },
   {
-    "file": "img_0950.webp",
-    "thumbnail": true,
-    "alt": "A turquoise lake winds between rocky mountains beneath bright clouds.",
-    "width": 585,
-    "height": 780
-  },
-  {
-    "file": "img_1642.webp",
-    "thumbnail": true,
-    "alt": "A figure walks along reflective wet sand at sunset.",
-    "width": 585,
-    "height": 780
-  },
-  {
-    "file": "img_3844.webp",
-    "thumbnail": true,
-    "alt": "Snow falls over rooftops and a distant skyline.",
-    "width": 585,
-    "height": 780
-  },
-  {
     "file": "img_7411.webp",
     "thumbnail": true,
     "alt": "A steep rocky summit rises over snowy evergreens.",
-    "width": 585,
-    "height": 780
-  },
-  {
-    "file": "img_0911.webp",
-    "thumbnail": true,
-    "alt": "A vivid green meadow sits below layered rock and billowing clouds.",
     "width": 585,
     "height": 780
   },
@@ -536,9 +340,9 @@ export const photos = [
   {
     "file": "img_1314.webp",
     "thumbnail": true,
-    "alt": "Buildings and street fixtures are silhouetted against orange sky.",
+    "alt": "An orange sky glows above a silhouetted city street.",
     "width": 780,
-    "height": 409
+    "height": 457
   },
   {
     "file": "img_1472.webp",
@@ -569,30 +373,16 @@ export const photos = [
     "height": 780
   },
   {
-    "file": "img_6959.webp",
-    "thumbnail": true,
-    "alt": "A smooth orange dune slopes beneath a deep blue sky.",
-    "width": 585,
-    "height": 780
-  },
-  {
     "file": "img_0634.webp",
     "thumbnail": true,
-    "alt": "Low sun glows through the dark interior of a car.",
-    "width": 585,
-    "height": 780
+    "alt": "Low sunlight shines through a car window over water and distant hills.",
+    "width": 780,
+    "height": 559
   },
   {
     "file": "img_7373.webp",
     "thumbnail": true,
     "alt": "Snow traces the ridges and crevices of a rocky mountainside.",
-    "width": 585,
-    "height": 780
-  },
-  {
-    "file": "973a3f34-8dd5-4f6c-bf44-c641ecf0831e.webp",
-    "thumbnail": true,
-    "alt": "A low brick building stands on an open street corner.",
     "width": 585,
     "height": 780
   },
@@ -609,20 +399,6 @@ export const photos = [
     "alt": "Tracks run across an open snowfield toward rocky peaks.",
     "width": 585,
     "height": 780
-  },
-  {
-    "file": "img_6978.webp",
-    "thumbnail": true,
-    "alt": "A bright sun hangs above dark dune crests.",
-    "width": 585,
-    "height": 780
-  },
-  {
-    "file": "img_2237.webp",
-    "thumbnail": true,
-    "alt": "Warm sun turns the window frames gold on a mountain veranda.",
-    "width": 780,
-    "height": 527
   },
   {
     "file": "img_2236.webp",
@@ -643,6 +419,97 @@ export const photos = [
     "thumbnail": true,
     "alt": "Figures gather in a wood-panelled room with light coming through the windows.",
     "width": 585,
+    "height": 780
+  },
+  {
+    "file": "img_3057.webp",
+    "thumbnail": true,
+    "alt": "Dark rooftops and evergreens overlook distant hills beneath a pale sky.",
+    "width": 585,
+    "height": 780
+  },
+  {
+    "file": "img_9346.webp",
+    "thumbnail": true,
+    "alt": "Pink sunset clouds and dark trees reflect in still water.",
+    "width": 585,
+    "height": 780
+  },
+  {
+    "file": "img_2037.webp",
+    "thumbnail": true,
+    "alt": "A map and small objects lie on a sunlit wooden table.",
+    "width": 585,
+    "height": 780
+  },
+  {
+    "file": "img_0860.webp",
+    "thumbnail": true,
+    "alt": "Mountains and bright clouds reflect in a still lake.",
+    "width": 585,
+    "height": 780
+  },
+  {
+    "file": "img_1076.webp",
+    "thumbnail": true,
+    "alt": "A rocky alpine slope rises beside a valley filled with low clouds.",
+    "width": 585,
+    "height": 780
+  },
+  {
+    "file": "img_2990.webp",
+    "thumbnail": true,
+    "alt": "Tall windows frame a city street from a dim interior.",
+    "width": 780,
+    "height": 667
+  },
+  {
+    "file": "img_0810.webp",
+    "thumbnail": true,
+    "alt": "A car window frames pines, rocky mountains, and white clouds.",
+    "width": 780,
+    "height": 727
+  },
+  {
+    "file": "img_0845.webp",
+    "thumbnail": true,
+    "alt": "Turquoise water, a stony shore, and mountains beneath scattered clouds.",
+    "width": 585,
+    "height": 780
+  },
+  {
+    "file": "img_2446.webp",
+    "thumbnail": true,
+    "alt": "Dark mountain ridges and snowy peaks stretch across a high snowfield.",
+    "width": 780,
+    "height": 585
+  },
+  {
+    "file": "img_2526.webp",
+    "thumbnail": true,
+    "alt": "A window frames a snowy mountain landscape.",
+    "width": 614,
+    "height": 780
+  },
+  {
+    "file": "img_1422.webp",
+    "thumbnail": true,
+    "alt": "Blue water stretches between layers of forested mountains.",
+    "width": 780,
+    "height": 451
+  },
+  {
+    "file": "img_1069.webp",
+    "thumbnail": true,
+    "alt": "A trail winds across an alpine meadow beneath dramatic clouds.",
+    "width": 585,
+    "height": 780
+  },
+  {
+    "file": "img_4494.webp",
+    "thumbnail": true,
+    "alt": "Dark branches frame lush foliage and a bright blue sky.",
+    "width": 657,
     "height": 780
   }
 ];
