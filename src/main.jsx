@@ -3,14 +3,10 @@ import { createRoot } from 'react-dom/client';
 import { photos, photoUrl, portfolio } from './portfolio.js';
 import './style.css';
 
-const categories = [...new Set(photos.map((photo) => photo.category).filter(Boolean))];
-
 function Gallery() {
-  const [category, setCategory] = useState(null);
   const [selected, setSelected] = useState(null);
   const dialog = useRef(null);
   const trigger = useRef(null);
-  const visible = photos.filter((photo) => category === null || photo.category === category);
 
   function openPhoto(photo, event) {
     trigger.current = event.currentTarget;
@@ -20,13 +16,13 @@ function Gallery() {
 
   function movePhoto(offset) {
     setSelected((current) => {
-      const index = visible.indexOf(current);
-      return visible[(index + offset + visible.length) % visible.length];
+      const index = photos.indexOf(current);
+      return photos[(index + offset + photos.length) % photos.length];
     });
   }
 
   function handleKeys(event) {
-    if (visible.length < 2) return;
+    if (photos.length < 2) return;
     if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
       event.preventDefault();
       movePhoto(event.key === 'ArrowLeft' ? -1 : 1);
@@ -35,25 +31,16 @@ function Gallery() {
 
   return (
     <section className="gallery wrap" id="gallery" aria-labelledby="gallery-title">
-      <div className="gallery-header">
-        <h2 id="gallery-title">Gallery</h2>
-        {categories.length > 1 && (
-          <div className="filters" role="group" aria-label="Filter by category">
-            {[null, ...categories].map((name) => (
-              <button key={name ?? ''} type="button" aria-pressed={category === name}
-                onClick={() => setCategory(name)}>{name ?? 'All photos'}</button>
-            ))}
-          </div>
-        )}
-      </div>
-      {visible.length === 0 ? (
+      <h2 id="gallery-title">Gallery</h2>
+      {photos.length === 0 ? (
         <p className="empty">No photographs added yet.</p>
       ) : (
-        <div className="grid">
-          {visible.map((photo) => (
+        <div className="masonry">
+          {photos.map((photo) => (
             <button className="photo" key={photo.file} type="button"
               aria-label={`View ${photo.title}`} onClick={(event) => openPhoto(photo, event)}>
-              <img src={photoUrl(photo.file, photo.thumbnail)} alt={photo.alt} loading="lazy" decoding="async" />
+              <img src={photoUrl(photo.file, photo.thumbnail)} alt={photo.alt}
+                width={photo.width} height={photo.height} loading="lazy" decoding="async" />
               <span className="caption">
                 <strong>{photo.title}</strong>
                 {photo.location && <span>{photo.location}</span>}
@@ -76,7 +63,7 @@ function Gallery() {
             </figcaption>
           </figure>
         )}
-        {visible.length > 1 && (
+        {photos.length > 1 && (
           <div className="viewer-controls">
             <button type="button" onClick={() => movePhoto(-1)}>Previous</button>
             <button type="button" onClick={() => movePhoto(1)}>Next</button>
@@ -88,11 +75,14 @@ function Gallery() {
 }
 
 function App() {
-  const featured = photos[0];
+  const featured = photos.find((photo) => photo.file === portfolio.banner) ?? photos[0];
   return (
     <>
       <header className="site-header wrap">
-        <a className="brand" href="#top">{portfolio.name}</a>
+        <div className="brand-block">
+          <a className="brand" href="#top">{portfolio.name}</a>
+          <p className="brand-subtitle">{portfolio.subtitle}</p>
+        </div>
         <nav aria-label="Main navigation">
           <a href="#gallery">Gallery</a>
           {portfolio.email && <a href={`mailto:${portfolio.email}`}>Contact</a>}
@@ -103,9 +93,7 @@ function App() {
           {featured && <img className="hero-image" src={photoUrl(featured.file)}
             alt={featured.alt} fetchPriority="high" />}
           <div className="hero-copy wrap">
-            <p className="eyebrow">Nature photography</p>
             <h1 id="hero-title">{portfolio.heading}</h1>
-            <p>{portfolio.introduction}</p>
             <a className="hero-link" href="#gallery">Explore the gallery <span aria-hidden="true">↓</span></a>
           </div>
         </section>
