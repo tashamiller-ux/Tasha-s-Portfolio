@@ -30,43 +30,33 @@ function Gallery() {
   }
 
   return (
-    <section className="gallery wrap" id="gallery" aria-labelledby="gallery-title">
-      <h2 id="gallery-title">Gallery</h2>
-      {photos.length === 0 ? (
-        <p className="empty">No photographs added yet.</p>
-      ) : (
-        <div className="masonry">
-          {photos.map((photo) => (
-            <button className="photo" key={photo.file} type="button"
-              aria-label={`View ${photo.title}`} onClick={(event) => openPhoto(photo, event)}>
-              <img src={photoUrl(photo.file, photo.thumbnail)} alt={photo.alt}
-                width={photo.width} height={photo.height} loading="lazy" decoding="async" />
-              <span className="caption">
-                <strong>{photo.title}</strong>
-                {photo.location && <span>{photo.location}</span>}
-              </span>
-            </button>
-          ))}
-        </div>
-      )}
+    <section className="gallery wrap" id="gallery" aria-label="Photo gallery">
+      <div className="masonry">
+        {photos.map((photo) => (
+          <button className="photo" key={photo.file} type="button"
+            aria-label={`View photo: ${photo.alt}`} onClick={(event) => openPhoto(photo, event)}>
+            <img src={photoUrl(photo.file, photo.thumbnail)} alt=""
+              width={photo.width} height={photo.height} loading="lazy" decoding="async" />
+          </button>
+        ))}
+      </div>
       <dialog ref={dialog} aria-label="Photo viewer" onKeyDown={handleKeys}
         onClose={() => { setSelected(null); trigger.current?.focus(); }}>
         <div className="viewer-bar">
-          <button type="button" autoFocus onClick={() => dialog.current.close()}>Close</button>
+          <button type="button" aria-label="Close viewer" autoFocus
+            onClick={() => dialog.current.close()}><span aria-hidden="true">×</span></button>
         </div>
         {selected && (
-          <figure>
-            <img src={photoUrl(selected.file)} alt={selected.alt} />
-            <figcaption aria-live="polite">
-              <strong>{selected.title}</strong>
-              {selected.location && <span>{selected.location}</span>}
-            </figcaption>
-          </figure>
+          <img src={photoUrl(selected.file)} alt={selected.alt} />
         )}
         {photos.length > 1 && (
           <div className="viewer-controls">
-            <button type="button" onClick={() => movePhoto(-1)}>Previous</button>
-            <button type="button" onClick={() => movePhoto(1)}>Next</button>
+            <button type="button" aria-label="Previous photo" onClick={() => movePhoto(-1)}>
+              <span aria-hidden="true">←</span>
+            </button>
+            <button type="button" aria-label="Next photo" onClick={() => movePhoto(1)}>
+              <span aria-hidden="true">→</span>
+            </button>
           </div>
         )}
       </dialog>
