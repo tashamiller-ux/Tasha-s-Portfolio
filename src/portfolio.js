@@ -7,18 +7,18 @@ export const portfolio = {
 
 export const photos = [
   {
-    "file": "img_7401.webp",
-    "thumbnail": true,
-    "alt": "Snow blankets an open clearing below jagged peaks.",
-    "width": 585,
-    "height": 780
-  },
-  {
     "file": "img_2773.webp",
     "thumbnail": true,
     "alt": "A low grassy bank curves into calm water beneath heavy clouds.",
     "width": 585,
     "height": 780
+  },
+  {
+    "file": "img_1916.webp",
+    "thumbnail": true,
+    "alt": "A lavender and peach sky above snow-streaked mountains at dusk.",
+    "width": 780,
+    "height": 595
   },
   {
     "file": "img_1102.webp",
@@ -42,23 +42,9 @@ export const photos = [
     "height": 451
   },
   {
-    "file": "img_1905.webp",
-    "thumbnail": true,
-    "alt": "Snow-dusted mountains recede beneath a pink and purple sky.",
-    "width": 780,
-    "height": 677
-  },
-  {
     "file": "img_1076.webp",
     "thumbnail": true,
     "alt": "A rocky alpine slope rises beside a valley filled with low clouds.",
-    "width": 585,
-    "height": 780
-  },
-  {
-    "file": "img_1916.webp",
-    "thumbnail": true,
-    "alt": "A thin pink band hangs above snowy peaks at dusk.",
     "width": 585,
     "height": 780
   },
@@ -126,13 +112,6 @@ export const photos = [
     "height": 780
   },
   {
-    "file": "img_7428.webp",
-    "thumbnail": true,
-    "alt": "Scattered evergreens stand below a snow-covered peak.",
-    "width": 585,
-    "height": 780
-  },
-  {
     "file": "img_2232.webp",
     "thumbnail": true,
     "alt": "Dark peaks give way to more distant ridges in pale haze.",
@@ -175,23 +154,9 @@ export const photos = [
     "height": 780
   },
   {
-    "file": "img_0943.webp",
-    "thumbnail": true,
-    "alt": "Green slopes rise toward snow-streaked peaks beneath blue sky.",
-    "width": 585,
-    "height": 780
-  },
-  {
     "file": "img_0890.webp",
     "thumbnail": true,
     "alt": "Clouds break above steep forested slopes and snowy peaks.",
-    "width": 585,
-    "height": 780
-  },
-  {
-    "file": "img_7012.webp",
-    "thumbnail": true,
-    "alt": "A line of small silhouettes crosses an orange dune.",
     "width": 585,
     "height": 780
   },
