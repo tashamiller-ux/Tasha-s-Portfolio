@@ -1,4 +1,4 @@
-# Tasha's Portfolio
+# Tasha Portfolio
 
 A React and Vite source project for a nature photography portfolio.
 
