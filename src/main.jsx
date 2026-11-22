@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { photos, photoUrl, portfolio } from './portfolio.js';
+import heroRidge from './assets/hero-ridge.webp';
 import './style.css';
 
 function Gallery() {
@@ -69,14 +70,10 @@ function Gallery() {
 }
 
 function App() {
-  const featured = photos.find((photo) => photo.file === portfolio.banner) ?? photos[0];
   return (
     <>
       <header className="site-header wrap">
-        <div className="brand-block">
-          <a className="brand" href="#top">{portfolio.name}</a>
-          <p className="brand-subtitle">{portfolio.subtitle}</p>
-        </div>
+        <a className="brand" href="#top">{portfolio.name}</a>
         <nav aria-label="Main navigation">
           <a href="#gallery">Gallery</a>
           {portfolio.email && <a href={`mailto:${portfolio.email}`}>Contact</a>}
@@ -84,8 +81,8 @@ function App() {
       </header>
       <main id="top">
         <section className="hero" aria-labelledby="hero-title">
-          {featured && <img className="hero-image" src={photoUrl(featured.file)}
-            alt={featured.alt} fetchPriority="high" />}
+          <img className="hero-image" src={heroRidge}
+            alt="Mist and clouds enveloping a rocky alpine ridge" fetchPriority="high" />
           <div className="hero-copy wrap">
             <h1 id="hero-title">{portfolio.heading}</h1>
             <a className="hero-link" href="#gallery">Explore the gallery <span aria-hidden="true">↓</span></a>

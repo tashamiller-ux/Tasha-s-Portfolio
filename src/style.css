@@ -13,6 +13,18 @@ body, h1, p { margin: 0; }
 a { color: inherit; text-underline-offset: .25em; }
 button { font: inherit; color: inherit; cursor: pointer; }
 img { display: block; width: 100%; }
+
+#root { isolation: isolate; }
+#root::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(rgb(247 247 245 / 62%), rgb(247 247 245 / 62%)),
+    url('./assets/cloud-background.webp') center / cover no-repeat;
+  pointer-events: none;
+}
 :focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
 .wrap { width: min(100% - 2.5rem, 75rem); margin-inline: auto; }
 
@@ -25,8 +37,6 @@ img { display: block; width: 100%; }
   gap: 1rem;
 }
 .brand { font: 1.6rem var(--serif); text-decoration: none; }
-.brand-block { display: grid; gap: .2rem; padding-block: .65rem; }
-.brand-subtitle { color: var(--muted); font-size: .85rem; }
 nav { display: flex; flex-wrap: wrap; gap: 1.5rem; }
 .site-header nav, .site-footer { font-size: .9rem; }
 
@@ -39,14 +49,14 @@ nav { display: flex; flex-wrap: wrap; gap: 1.5rem; }
   background: radial-gradient(ellipse at 83% 12%, #4c6752, #1a3024 68%);
   color: #fffdf5;
 }
-.hero:has(.hero-image)::before {
+.hero::before {
   position: absolute;
   inset: 0;
   z-index: -1;
   content: '';
-  background: linear-gradient(0deg, rgb(12 21 16 / 92%), rgb(12 21 16 / 65%) 48%, rgb(12 21 16 / 15%));
+  background: linear-gradient(0deg, rgb(12 21 16 / 82%), rgb(12 21 16 / 56%) 48%, transparent 82%);
 }
-.hero-image { position: absolute; inset: 0; height: 100%; object-fit: cover; z-index: -2; }
+.hero-image { position: absolute; inset: 0; height: 100%; object-fit: cover; object-position: 88% center; z-index: -2; }
 .hero-copy { padding-block: clamp(3rem, 8vw, 6rem); }
 h1 { font-family: var(--serif); font-weight: 400; }
 h1 { font-size: clamp(2.2rem, 5vw, 4.5rem); line-height: 1; margin-block: 0 1rem; max-width: 16ch; }

@@ -1,8 +1,6 @@
 export const portfolio = {
   name: "Tasha's Portfolio",
-  subtitle: 'XX',
   heading: 'Through my lens',
-  banner: 'img_2287.webp',
   photographer: '',
   email: '',
 };
