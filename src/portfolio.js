@@ -1,5 +1,5 @@
 export const portfolio = {
-  name: "Tasha Portfolio",
+  name: "Tasha’s Portfolio",
   heading: 'Through my lens',
   photographer: '',
   email: '',
@@ -123,20 +123,6 @@ export const photos = [
     "thumbnail": true,
     "alt": "Turquoise water stretches toward rugged mountains under textured clouds.",
     "width": 669,
-    "height": 780
-  },
-  {
-    "file": "img_1021.webp",
-    "thumbnail": true,
-    "alt": "A narrow trail leads between steep slopes under layered clouds.",
-    "width": 585,
-    "height": 780
-  },
-  {
-    "file": "img_3057.webp",
-    "thumbnail": true,
-    "alt": "Dark rooftops and evergreens overlook distant hills beneath a pale sky.",
-    "width": 585,
     "height": 780
   },
   {
@@ -301,13 +287,6 @@ export const photos = [
     "height": 780
   },
   {
-    "file": "img_0226.webp",
-    "thumbnail": true,
-    "alt": "White surf breaks over dark rocks under a blue sky.",
-    "width": 585,
-    "height": 780
-  },
-  {
     "file": "img_2555.webp",
     "thumbnail": true,
     "alt": "Sunlit, snow-streaked peaks above a shadowed alpine basin.",
@@ -369,13 +348,6 @@ export const photos = [
     "alt": "Snow-covered mountains rise beyond a line of dark evergreens.",
     "width": 585,
     "height": 780
-  },
-  {
-    "file": "img_2242.webp",
-    "thumbnail": true,
-    "alt": "Evergreens frame blue water and snowy peaks.",
-    "width": 780,
-    "height": 527
   },
   {
     "file": "img_2236.webp",
