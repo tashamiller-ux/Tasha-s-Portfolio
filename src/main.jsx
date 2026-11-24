@@ -46,18 +46,82 @@ function Gallery() {
   const [selected, setSelected] = useState(null);
   const dialog = useRef(null);
   const trigger = useRef(null);
+  const imageCache = useRef(new Map());
+  const requestedIndex = useRef(null);
+  const requestId = useRef(0);
+  const visibleIndex = useRef(null);
+
+  function prepareImage(url) {
+    const cache = imageCache.current;
+    if (cache.has(url)) return cache.get(url);
+
+    const image = new Image();
+    image.src = url;
+    const ready = image.decode().then(() => image).catch((error) => {
+      if (cache.get(url) === ready) cache.delete(url);
+      throw error;
+    });
+    cache.set(url, ready);
+    // Retain a small working set of decoded full-size images and thumbnails.
+    if (cache.size > 12) cache.delete(cache.keys().next().value);
+    return ready;
+  }
+
+  function preparePhoto(index) {
+    const photo = photos[index];
+    return Promise.all([
+      prepareImage(photoUrl(photo.file)),
+      prepareImage(photoUrl(photo.file, photo.thumbnail)),
+    ]);
+  }
+
+  function adjacentIndex(index, offset) {
+    return (index + offset + photos.length) % photos.length;
+  }
+
+  function preloadNeighbors(index) {
+    preparePhoto(adjacentIndex(index, -1)).catch(() => {});
+    preparePhoto(adjacentIndex(index, 1)).catch(() => {});
+  }
 
   function openPhoto(photo, event) {
+    const index = photos.indexOf(photo);
+    requestId.current += 1;
+    requestedIndex.current = index;
+    visibleIndex.current = index;
     trigger.current = event.currentTarget;
     setSelected(photo);
     dialog.current.showModal();
+    preparePhoto(index).catch(() => {});
+    preloadNeighbors(index);
   }
 
-  function movePhoto(offset) {
-    setSelected((current) => {
-      const index = photos.indexOf(current);
-      return photos[(index + offset + photos.length) % photos.length];
-    });
+  async function movePhoto(offset) {
+    if (!dialog.current.open || requestedIndex.current === null) return;
+    const index = adjacentIndex(requestedIndex.current, offset);
+    const id = ++requestId.current;
+    requestedIndex.current = index;
+
+    try {
+      await preparePhoto(index);
+    } catch {
+      if (id === requestId.current) requestedIndex.current = visibleIndex.current;
+      return;
+    }
+
+    if (id !== requestId.current || !dialog.current.open) return;
+    visibleIndex.current = index;
+    // One state change updates the sharp photo and blurred background together.
+    setSelected(photos[index]);
+    preloadNeighbors(index);
+  }
+
+  function closePhoto() {
+    requestId.current += 1;
+    requestedIndex.current = null;
+    visibleIndex.current = null;
+    setSelected(null);
+    trigger.current?.focus();
   }
 
   function handleKeys(event) {
@@ -80,7 +144,7 @@ function Gallery() {
         ))}
       </div>
       <dialog className="viewer" ref={dialog} aria-label="Photo viewer" onKeyDown={handleKeys}
-        onClose={() => { setSelected(null); trigger.current?.focus(); }}>
+        onClose={closePhoto}>
         {selected && (
           <img className="viewer-background" src={photoUrl(selected.file, selected.thumbnail)}
             alt="" aria-hidden="true" />

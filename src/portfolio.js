@@ -7,13 +7,6 @@ export const portfolio = {
 
 export const photos = [
   {
-    "file": "img_2773.webp",
-    "thumbnail": true,
-    "alt": "A low grassy bank curves into calm water beneath heavy clouds.",
-    "width": 585,
-    "height": 780
-  },
-  {
     "file": "img_1916.webp",
     "thumbnail": true,
     "alt": "A lavender and peach sky above snow-streaked mountains at dusk.",
@@ -45,13 +38,6 @@ export const photos = [
     "file": "img_1076.webp",
     "thumbnail": true,
     "alt": "A rocky alpine slope rises beside a valley filled with low clouds.",
-    "width": 585,
-    "height": 780
-  },
-  {
-    "file": "img_3184.webp",
-    "thumbnail": true,
-    "alt": "A white lighthouse rises above low coastal vegetation.",
     "width": 585,
     "height": 780
   },
@@ -301,13 +287,6 @@ export const photos = [
     "height": 780
   },
   {
-    "file": "img_0810.webp",
-    "thumbnail": true,
-    "alt": "A car window frames pines, rocky mountains, and white clouds.",
-    "width": 780,
-    "height": 727
-  },
-  {
     "file": "img_7363.webp",
     "thumbnail": true,
     "alt": "Snow-covered mountains rise beyond a line of dark evergreens.",
@@ -404,13 +383,6 @@ export const photos = [
     "alt": "Figures gather in a wood-panelled room with light coming through the windows.",
     "width": 585,
     "height": 780
-  },
-  {
-    "file": "img_1314.webp",
-    "thumbnail": true,
-    "alt": "An orange sky glows above a silhouetted city street.",
-    "width": 780,
-    "height": 457
   },
   {
     "file": "img_1548.webp",
